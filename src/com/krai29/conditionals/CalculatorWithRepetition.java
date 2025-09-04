@@ -35,36 +35,26 @@ public class CalculatorWithRepetition {
                     num2 = in.nextDouble();
                 }
 
-                switch (operator){
-                    case '+':
-                        ans = num1 + num2;
-                        break;
-
-                    case '-':
-                        ans = num1 - num2;
-                        break;
-
-                    case '*':
-                        ans = num1 * num2;
-                        break;
-
-                    case '/':
-                        if (num2!=0){
+                switch (operator) {
+                    case '+' -> ans = num1 + num2;
+                    case '-' -> ans = num1 - num2;
+                    case '*' -> ans = num1 * num2;
+                    case '/' -> {
+                        if (num2 != 0) {
                             ans = num1 / num2;
                         } else {
                             isValid = false;
                             System.out.println("Can't divide by zero");
                         }
-                        break;
-
-                    case '%' :
-                        if (num2!=0){
+                    }
+                    case '%' -> {
+                        if (num2 != 0) {
                             ans = num1 % num2;
                         } else {
                             isValid = false;
                             System.out.println("Can't divide by zero");
                         }
-                        break;
+                    }
                 }
 
                 if (isValid){
