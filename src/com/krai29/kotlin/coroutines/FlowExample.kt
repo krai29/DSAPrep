@@ -1,6 +1,5 @@
 package com.krai29.kotlin.coroutines
 
-import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.flow.flow
 
 suspend fun main(){                    // or main() = runBlocking{}
